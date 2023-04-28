@@ -1,7 +1,7 @@
 name: Update gist with WakaTime summary
 on:
   schedule:
-    - cron: '12 10 * * *'
+    - cron: '30 10 * * *'
 jobs:
   update-gist:
     runs-on: ubuntu-latest
@@ -10,7 +10,7 @@ jobs:
       - name: Update gist
         uses: wtlllll190812/wakatime-sync@master
         env:
-          GH_TOKEN: ${{ vars.GH_TOKEN }}
-          GIST_ID: ${{ vars.GIST_ID}}
-          WAKATIME_API_KEY: ${{ vars.WAKATIME_API_KEY }}
-          SCU_KEY: ${{ vars.SCU_KEY }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIST_ID: ${{ secrets.GIST_ID}}
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          SCU_KEY: ${{ secrets.SCU_KEY }}

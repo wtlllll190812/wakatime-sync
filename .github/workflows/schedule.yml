@@ -1,7 +1,7 @@
 name: Update gist with WakaTime summary
 on:
   schedule:
-    - cron: '58 19 * * *'
+    - cron: '30 20 * * *'
 jobs:
   update-gist:
     runs-on: ubuntu-latest
